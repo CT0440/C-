@@ -34,3 +34,126 @@ A namespace is a container or a mechnism used in programming to organize and
 group related code elements(such as classes, functions) under a unique identifier.
 
 It  helps prevent naming conflicts and makes code more readable, maintainable and modular.
+
+variables in c++
+-----------------
+In C++, variable is a name of memory location. it is a basic unit of storage in program.
+The value stored in a variable can be accessed or changed during the execution.
+Types of Variables
+In C++, following are the data types a variable can store:
+
+int: For storing integers or whole numbers.
+float: For storing real numbers with decimal points.
+char: For storing single characters.
+bool: For storing boolean value i.e. true and false.
+string: For storing the textual data.
+Rules For Naming Variable
+The names given to a variable is called identifiers.
+
+There are some rules for giving a name to the variable:
+--------------------------------------------------------
+* The name of the variable contains letters, digits, and underscores.
+* The name of the variable is case sensitive.
+ (e.g. Arr and arr both are different variables).
+* The name of the variable does not contain any whitespace and special characters (ex #, $, %, *, etc).
+* All the variable names must begin with a letter of the alphabet or an underscore (_).
+* We cannot used C++ keyword (e.g. float, double, class) as a variable name.
+
+Memory Management of Variables
+-------------------------------
+* When a variable is declared, the compiler is told about the variable name and the type of
+data it will store. It is not allocated the any memory at this point. 
+* It is when the variable is defined it is allocated the memory. 
+* The amount of memory allocated depends upon the type of data that a variable intends to store.
+* Initially, the variable only stores some garbage value (value that does not mean anything).
+* At the time of initialization, it is assigned some meaningful value that using the
+assignment operator that is then stored in the memory allocated to the function.
+* So basically, we are manipulating a specific part of memory using the variable name.
+
+5. Variable Scope and Lifetime
+-------------------------------
+Scope:
+The scope of a variable refers to the region in the code where the variable
+can be accessed.
+The scope depends on where the variable is declared.
+
+*Local variables: Declared inside a function, they are only accessible within that function.
+*Global variables: Declared outside any function, they can be accessed from anywhere in the program.
+
+Lifetime:
+The lifetime of a variable refers to how long the variable exists in memory during the program's execution.
+
+*Local variables: Their lifetime starts when the function is called and ends when the function exits.
+*Global variables: Their lifetime starts when the program starts and ends when the program terminates.
+
+C++ Data Types
+--------------
+Data types specify the type of data that a variable can store.
+Whenever a variable is defined in C++, the compiler allocates some memory
+for that variable based on the data type with which it is declared 
+as every data type requires a different amount of memory.
+* premitive Data types(integer types, floating-point types, character types, boolen type)
+
+a.integer datatypes
+--------------------
+int: Used to represent whole numbers, both positive and negative.
+Size: Typically 4 bytes (depends on the platform)
+Example: int age = 25;
+
+short: A smaller integer type than int.
+Size: Typically 2 bytes
+Example: short temperature = -5;
+
+long: A larger integer type than int.
+Size: Typically 4 or 8 bytes, depending on the platform
+Example: long population = 1000000;
+
+long long: A very large integer type.
+Size: Typically 8 bytes
+Example: long long distance = 9000000000;
+
+unsigned types: Integer types that can only represent non-negative values.
+Example: unsigned int count = 100;
+
+b.floating-point types
+----------------------
+float: Used to represent decimal numbers with single precision.
+Size: Typically 4 bytes
+Example: float pi = 3.14f;
+
+double: Used to represent decimal numbers with double precision.
+Size: Typically 8 bytes
+Example: double pi = 3.14159265359;
+
+long double: Used for even more precision than double (platform dependent).
+Size: Typically 8 or 12 bytes
+Example: long double pi = 3.141592653589793238;
+
+c.character type
+-----------------
+char: Used to store single characters (e.g., 'a', '1').
+Size: Typically 1 byte
+Example: char letter = 'A';
+
+unsigned char: Stores non-negative values between 0 and 255.
+Size: Typically 1 byte
+Example: unsigned char value = 255;
+
+signed char: Stores values from -128 to 127.
+Size: Typically 1 byte
+Example: signed char value = -100;
+
+wchar_t: Used to store wide characters (e.g., Unicode characters).
+Size: Typically 2 or 4 bytes
+Example: wchar_t wideChar = L'A';
+
+d. Boolean Type
+----------------
+bool: Used to store boolean values (true or false).
+Size: Typically 1 byte
+Example: bool isActive = true;
+
+* Dervied datatypes(array, pointer, reference, function)
+* user-defined datatypes(class, struct, union, typedef, using)
+
+
