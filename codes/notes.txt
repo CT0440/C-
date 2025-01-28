@@ -156,4 +156,83 @@ Example: bool isActive = true;
 * Dervied datatypes(array, pointer, reference, function)
 * user-defined datatypes(class, struct, union, typedef, using)
 
+Type conversion
+----------------
+Type conversion means converting one type of data to another compatible type such that it doesn’t lose 
+its meaning. 
+It is essential for managing different data types in C++.
+
+C++  covers the various methods of type conversion, helping you understand how to handle data types correctly.
+In C++, there are two types of type conversion:
+* Implicit Type Conversion(coersion)
+* Explicit Type Conversion
+
+Implicit Type Conversion
+-------------------------
+Implicit type conversion (also known as coercion) is the conversion of one type of data to another type 
+automatically by the compiler when needed. 
+It happens automatically when:
+* Operations are performed on values of different data types.
+* If you pass an argument to a function that expects a different data type.
+* Assigning a value of one data type to a variable of another data type.
+
+limitations
+-----------
+It is possible for implicit conversions to lose information, 
+signs can be lost (when signed is implicitly converted to unsigned), and overflow can occur 
+(when long long is implicitly converted to float).
+
+Cases of Implicit Type Conversion
+----------------------------------
+1. For Numeric Type
+
+All the data types of the variables are upgraded to the data type of the variable with largest data type. 
+For numeric type,
+bool -> char -> short int -> int ->  unsigned int -> long -> unsigned -> long long -> float -> double -> long double
+
+
+2. Pointer Conversions
+
+Pointers to derived classes can be converted to pointers to base classes automatically.
+
+3. Boolean Conversion
+
+Any scalar type (integer, floating-point, pointer) is implicitly converted to bool in a context that 
+requires a Boolean value (e.g., if, while, for conditions).
+
+Explicit Type Conversion
+-------------------------
+Explicit type conversion, also called type casting is the conversion of one type of data to another type 
+manually by a programmer. 
+Here the user can typecast the result to make it of a particular data type. 
+In C++, it can be done by two ways:
+
+1. C Style Typecasting
+----------------------
+This method is inherited by C++ from C. 
+The conversion is done by explicitly defining the required type in front of the expression in parenthesis. 
+This can be also known as forceful casting.
+syntax: (type) expression;
+
+2. C++ Style Typecasting
+------------------------
+C++ introduced its own typecasting method using cast operators. 
+Cast operator is an unary operator which forces one data type to be converted into another data type. 
+
+C++ supports four types of casting:
+* Static Cast: Used for standard compile time type conversions.
+* Dynamic Cast: Used for runtime type conversion in polymorphism and inheritance.
+* Const Cast: Removes or adds const or volatile qualifiers.
+* Reinterpret Cast: Used for low-level reinterpretation of bits (e.g., converting pointers).
+
+
+Risks of Type Conversion
+------------------------
+Type conversion provides useful functionality to the language but also introduces certain risks:
+
+Data loss that occurs when converting from a larger type to a smaller type (e.g., int to char).
+Undefined behavior that happens when casting pointers between unrelated types and dereferencing them.
+Violation of const correctness when removing const with const_cast and modifying the variable leads to undefined behavior.
+Memory misalignment casting pointers to types with stricter alignment can cause crashes.
+
 
