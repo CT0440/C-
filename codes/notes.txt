@@ -341,6 +341,18 @@ Here's the table with **Relational Operators** :
 
 
 
+Control flow statements
+-----------------------
+Control flow statements are fundamental components of programming languages that allow developers to control
+the order in which instructions are executed in a program. 
+They enable execution of a block of code multiple times, execute a block of code based on conditions, 
+terminate or skip the execution of certain lines of code, etc.
+
+* Conditional statements - (if, if-else, else-if, switch-case)
+* Looping statements - (for, while, do-while)
+* Jump statements - (break, continue, return, goto)
+
+
 
 
 
